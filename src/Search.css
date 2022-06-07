@@ -1,0 +1,28 @@
+.search-form {
+  font-family: "Handlee", cursive;
+  color: #4a4e52;
+}
+
+.btn {
+  color: #4a4e52;
+  background: none;
+  width: 80px;
+  line-height: 32px;
+  border-radius: 5px;
+  border-color: #efb1bb;
+  border-style: solid;
+}
+
+.btn:hover {
+  background: #f9629f;
+  border-color: #f9629f;
+  color: white;
+  transition: 3ms ease-in-out;
+  opacity: 0.4;
+}
+
+#city-input {
+  border-color: #efb1bb;
+  background: none;
+  color: #4a4e52;
+}

@@ -1,0 +1,26 @@
+h1 {
+  margin-bottom: -8px;
+  display: inline-block;
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  color: #4a4e52;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  color: #4a4e52;
+  margin: 0;
+  padding: 0;
+  line-height: 19px;
+  font-family: "Handlee", cursive;
+}
+
+.City {
+  text-align: left;
+}

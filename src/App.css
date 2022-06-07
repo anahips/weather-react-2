@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 550px;
+  border: 1px solid #eec0c8;
+  padding: 20px;
+  border-radius: 5px;
+  background: linear-gradient(#eec0c8, #ffc0cb, #f9629f);
+  margin: 0 auto;
+  margin-top: 50px;
+}
