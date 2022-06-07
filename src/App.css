@@ -51,3 +51,13 @@
   margin: 0 auto;
   margin-top: 50px;
 }
+
+p {
+  text-align: center;
+  font-size: 11px;
+  padding-top: 5px;
+}
+
+a {
+  text-decoration: none;
+}
