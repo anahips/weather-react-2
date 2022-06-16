@@ -1,3 +1,4 @@
+import React from "react";
 import Search from "./Search";
 import City from "./City";
 import Temperature from "./Temperature";
