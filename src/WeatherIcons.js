@@ -23,5 +23,11 @@ export default function WeatherIcons(props) {
     "50n": "MIST",
   };
 
-  return <ReactAnimatedWeather icon={codeMapping[props.code]} />;
+  return (
+    <ReactAnimatedWeather
+      icon={codeMapping[props.code]}
+      color="blue"
+      animate="yes"
+    />
+  );
 }
