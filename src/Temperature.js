@@ -1,4 +1,5 @@
 import React from "react";
+import WeatherIcons from "./WeatherIcons";
 
 import "./Temperature.css";
 
@@ -7,11 +8,7 @@ export default function Temperature(props) {
     <div className="row Temperature">
       <div className="col-6 text-start">
         <div className="clearfix weather-temperature">
-          <img
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-            alt="sun"
-            id="icon"
-          />
+          <WeatherIcons code={props.data.image} />
           <span>
             <strong>{props.data.temperature}</strong>
           </span>
