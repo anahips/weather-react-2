@@ -20,14 +20,14 @@ export default function Search() {
   }
 
   function displayWeather(response) {
-    console.log(response);
     setWeatherData({
       temperature: Math.round(response.data.main.temp),
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed),
       feelsLike: Math.round(response.data.main.feels_like),
       description: response.data.weather[0].description,
-      time: response.data.coord.dt,
+      image: response.data.weather[0].icon,
+      date: response.data.dt * 1000,
       name: response.data.name,
     });
   }

@@ -8,7 +8,7 @@ export default function Temperature(props) {
       <div className="col-6 text-start">
         <div className="clearfix weather-temperature">
           <img
-            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            src="http://openweathermap.org/img/wn/10d@2x.png"
             alt="sun"
             id="icon"
           />
