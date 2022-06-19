@@ -27,6 +27,8 @@ export default function Search() {
       wind: Math.round(response.data.wind.speed),
       feelsLike: Math.round(response.data.main.feels_like),
       description: response.data.weather[0].description,
+      time: response.data.coord.dt,
+      name: response.data.name,
     });
   }
 
@@ -45,7 +47,7 @@ export default function Search() {
           />
           <button
             className="btn btn-outline-secondary"
-            type="button"
+            type="submit"
             id="button-addon2"
           >
             Search
