@@ -2,14 +2,7 @@ import React from "react";
 
 import "./Temperature.css";
 
-export default function Temperature() {
-  let weatherData = {
-    temperature: 21,
-    humidity: 48,
-    wind: 3,
-    feelsLike: 16,
-  };
-
+export default function Temperature(props) {
   return (
     <div className="row Temperature">
       <div className="col-6 text-start">
@@ -20,7 +13,7 @@ export default function Temperature() {
             id="icon"
           />
           <span>
-            <strong>{weatherData.temperature}</strong>
+            <strong>{props.data.temperature}</strong>
           </span>
           <span className="units">°C</span>
         </div>
@@ -28,13 +21,13 @@ export default function Temperature() {
       <div className="col-6">
         <ul>
           <li>
-            Humidity: <span>{weatherData.humidity}%</span>
+            Humidity: <span>{props.data.humidity}%</span>
           </li>
           <li>
-            Wind: <span>{weatherData.wind} mph</span>
+            Wind: <span>{props.data.wind} mph</span>
           </li>
           <li>
-            Feels like: <span>{weatherData.feelsLike} °C</span>
+            Feels like: <span>{props.data.feelsLike} °C</span>
           </li>
         </ul>
       </div>

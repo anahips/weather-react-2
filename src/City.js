@@ -2,21 +2,15 @@ import React from "react";
 
 import "./City.css";
 
-export default function City() {
-  let cityData = {
-    city: "London",
-    lastUpdate: "Saturday 21:30",
-    description: "Cloudy skies",
-  };
-
+export default function City(props) {
   return (
     <div className="City">
-      <h1>{cityData.city}</h1>
+      <h1>London</h1>
       <ul>
         <li id="update">
-          Last updated <span>{cityData.lastUpdate}</span>
+          Last updated <span>{props.data.desription}</span>
         </li>
-        <li id="description">{cityData.description}</li>
+        <li id="description">{props.data.description}</li>
       </ul>
     </div>
   );

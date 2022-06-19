@@ -1,7 +1,5 @@
 import React from "react";
 import Search from "./Search";
-import City from "./City";
-import Temperature from "./Temperature";
 
 import "./App.css";
 
@@ -10,8 +8,6 @@ function App() {
     <div className="App">
       <div className="container">
         <Search />
-        <City />
-        <Temperature />
       </div>
       <p>
         <a href="https://github.com/anahips/weather-react-2">

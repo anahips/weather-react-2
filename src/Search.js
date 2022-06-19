@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import City from "./City";
+import Temperature from "./Temperature";
 
 import "./Search.css";
 
 export default function Search() {
   let [city, setCity] = useState("");
+  let [weatherData, setWeatherData] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -18,28 +21,39 @@ export default function Search() {
 
   function displayWeather(response) {
     console.log(response);
+    setWeatherData({
+      temperature: Math.round(response.data.main.temp),
+      humidity: Math.round(response.data.main.humidity),
+      wind: Math.round(response.data.wind.speed),
+      feelsLike: Math.round(response.data.main.feels_like),
+      description: response.data.weather[0].description,
+    });
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="input-group mb-3 search-form">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Enter a city"
-          aria-label="Recipient's username"
-          aria-describedby="button-addon2"
-          id="city-input"
-          onChange={updateCity}
-        />
-        <button
-          className="btn btn-outline-secondary"
-          type="button"
-          id="button-addon2"
-        >
-          Search
-        </button>
-      </div>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <div className="input-group mb-3 search-form">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter a city"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+            id="city-input"
+            onChange={updateCity}
+          />
+          <button
+            className="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+      <City data={weatherData} />
+      <Temperature data={weatherData} />
+    </div>
   );
 }
