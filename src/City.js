@@ -33,7 +33,7 @@ export default function City(props) {
             {day}, {hours}:{minutes}
           </span>
         </li>
-        <li id="description">{props.data.description}</li>
+        <li className="description">{props.data.description}</li>
       </ul>
     </div>
   );

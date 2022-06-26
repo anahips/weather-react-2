@@ -9,12 +9,8 @@ export default function WeatherData(props) {
     <div className="row mt-3">
       <div className="col-6 weather-temperature">
         <div className="clearfix">
-          <div className="float-left">
-            <WeatherIcons code={props.data.image} />
-          </div>
-          <div className="float-left">
-            <Temperature data={props.data.temperature} />
-          </div>
+          <WeatherIcons code={props.data.image} />
+          <Temperature data={props.data.temperature} />
         </div>
       </div>
       <div className="col-6">

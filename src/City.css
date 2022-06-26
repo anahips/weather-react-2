@@ -24,3 +24,7 @@ li {
 .City {
   text-align: left;
 }
+
+.description {
+  text-transform: capitalize;
+}

@@ -15,7 +15,7 @@ export default function Temperature(props) {
 
   if (unit === "celsius") {
     return (
-      <div>
+      <span>
         <span>
           <strong>{props.data}</strong>
         </span>
@@ -26,12 +26,12 @@ export default function Temperature(props) {
             F
           </a>
         </span>
-      </div>
+      </span>
     );
   } else {
     let fahrenheit = Math.round((props.data * 9) / 5 + 32);
     return (
-      <div>
+      <span>
         <span>
           <strong>{fahrenheit}</strong>
         </span>
@@ -41,7 +41,7 @@ export default function Temperature(props) {
           </a>{" "}
           | F
         </span>
-      </div>
+      </span>
     );
   }
 }

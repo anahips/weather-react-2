@@ -7,18 +7,12 @@ ul {
   text-align: left;
 }
 
-.weather-temperature img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
-  vertical-align: 0;
-}
-
 .weather-temperature strong {
-  font-size: 64px;
+  color: ##4a4e48;
+  font-size: 90px;
   font-weight: 400;
   line-height: 64px;
-  margin-left: 5px;
+  margin-left: 15px;
   font-family: "Patrick Hand", cursive;
 }
 
@@ -26,5 +20,6 @@ ul {
   position: relative;
   font-family: "Patrick Hand", cursive;
   font-size: 16px;
-  top: -34px;
+  top: -50px;
+  margin-left: 10px;
 }
