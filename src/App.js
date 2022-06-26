@@ -9,12 +9,12 @@ function App() {
       <div className="container">
         <Search defaultCity="London" />
       </div>
-      <p>
+      <footer>
         <a href="https://github.com/anahips/weather-react-2">
           Open source code
         </a>{" "}
         by <a href="https://www.linkedin.com/in/ana-hipolito/">Ana Hipolito</a>
-      </p>
+      </footer>
     </div>
   );
 }
