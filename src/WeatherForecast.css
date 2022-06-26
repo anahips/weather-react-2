@@ -1,0 +1,13 @@
+.forecast {
+  text-align: center;
+  font-family: "Patrick Hand", cursive;
+  color: #4a4e52;
+}
+
+.day {
+  font-weight: 600;
+}
+
+.forecast-minimum {
+  margin-right: 5px;
+}

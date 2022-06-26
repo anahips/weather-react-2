@@ -9,7 +9,7 @@ export default function WeatherData(props) {
     <div className="row mt-3">
       <div className="col-6 weather-temperature">
         <div className="clearfix">
-          <WeatherIcons code={props.data.image} />
+          <WeatherIcons code={props.data.image} size={64} />
           <Temperature data={props.data.temperature} />
         </div>
       </div>
