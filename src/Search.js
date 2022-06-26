@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import City from "./City";
-import Temperature from "./Temperature";
+import WeatherData from "./WeatherData";
 
 import "./Search.css";
 
@@ -55,7 +55,7 @@ export default function Search() {
         </div>
       </form>
       <City data={weatherData} />
-      <Temperature data={weatherData} />
+      <WeatherData data={weatherData} />
     </div>
   );
 }
