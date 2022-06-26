@@ -5,14 +5,19 @@ import WeatherData from "./WeatherData";
 
 import "./Search.css";
 
-export default function Search() {
-  let [city, setCity] = useState("");
-  let [weatherData, setWeatherData] = useState("");
+export default function Search(props) {
+  const [ready, setReady] = useState(false);
+  const [city, setCity] = useState(props.defaultCity);
+  const [weatherData, setWeatherData] = useState("");
+
+  function enterCity() {
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=49377281846eee971852e0a6a46bc4a0&units=metric`;
+    axios.get(url).then(displayWeather);
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=49377281846eee971852e0a6a46bc4a0&units=metric`;
-    axios.get(url).then(displayWeather);
+    enterCity();
   }
 
   function updateCity(event) {
@@ -20,6 +25,7 @@ export default function Search() {
   }
 
   function displayWeather(response) {
+    setReady(true);
     setWeatherData({
       temperature: Math.round(response.data.main.temp),
       humidity: Math.round(response.data.main.humidity),
@@ -32,30 +38,33 @@ export default function Search() {
     });
   }
 
-  return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <div className="input-group mb-3 search-form">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Enter a city"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-            id="city-input"
-            onChange={updateCity}
-          />
-          <button
-            className="btn btn-outline-secondary"
-            type="submit"
-            id="button-addon2"
-          >
-            Search
-          </button>
-        </div>
-      </form>
-      <City data={weatherData} />
-      <WeatherData data={weatherData} />
-    </div>
-  );
+  if (ready) {
+    return (
+      <div>
+        <form className="search-form" onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-9">
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Enter a city"
+                id="city-input"
+                onChange={updateCity}
+              />
+            </div>
+            <div className="col-3">
+              <button type="submit" class="btn btn-primary">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+        <City data={weatherData} />
+        <WeatherData data={weatherData} />
+      </div>
+    );
+  } else {
+    enterCity();
+    return "Gathering information...";
+  }
 }

@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Search />
+        <Search defaultCity="London" />
       </div>
       <p>
         <a href="https://github.com/anahips/weather-react-2">

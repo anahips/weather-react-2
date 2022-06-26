@@ -5,11 +5,11 @@
 
 .btn {
   color: #4a4e52;
-  background: none;
-  width: 80px;
-  line-height: 32px;
+  background: white;
+  width: 100px;
+  line-height: 24px;
   border-radius: 5px;
-  border-color: #efb1bb;
+  border-color: #4a4e52;
   border-style: solid;
 }
 
@@ -22,7 +22,7 @@
 }
 
 #city-input {
-  border-color: #efb1bb;
-  background: none;
+  border-color: #4a4e52;
+  background: white;
   color: #4a4e52;
 }
