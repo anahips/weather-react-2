@@ -32,6 +32,7 @@ export default function Search(props) {
       humidity: Math.round(response.data.main.humidity),
       wind: Math.round(response.data.wind.speed),
       feelsLike: Math.round(response.data.main.feels_like),
+      coordinates: response.data.coord,
       description: response.data.weather[0].description,
       image: response.data.weather[0].icon,
       date: response.data.dt * 1000,
@@ -62,7 +63,7 @@ export default function Search(props) {
         </form>
         <City data={weatherData} />
         <WeatherData data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
