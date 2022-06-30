@@ -1,11 +1,7 @@
 .forecast {
   text-align: center;
   font-family: "Patrick Hand", cursive;
-  color: #4a4e52;
-}
-
-.day {
-  font-weight: 600;
+  color: #e3e8ed;
 }
 
 .forecast-maximum {

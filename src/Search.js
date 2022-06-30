@@ -55,7 +55,7 @@ export default function Search(props) {
               />
             </div>
             <div className="col-3">
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" className="btn btn-primary">
                 Search
               </button>
             </div>
