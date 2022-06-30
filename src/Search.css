@@ -20,7 +20,7 @@ h5 {
 
 .btn:hover {
   background: none;
-  border-color: #4a4e52;
+  border-color: white;
   color: white;
   transition: 3ms ease-in-out;
 }
