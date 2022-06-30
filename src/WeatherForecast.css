@@ -1,9 +1,10 @@
 .forecast {
   text-align: center;
   font-family: "Patrick Hand", cursive;
-  color: #e3e8ed;
+  color: white;
+  padding-top: 15px;
 }
 
 .forecast-maximum {
-  margin-right: 5px;
+  margin-right: 8px;
 }

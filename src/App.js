@@ -10,10 +10,17 @@ function App() {
         <Search defaultCity="London" />
       </div>
       <footer>
+        This project was coded by{" "}
+        <a href="https://www.linkedin.com/in/ana-hipolito/">Ana Hipolito</a> and
+        is
         <a href="https://github.com/anahips/weather-react-2">
-          Open source code
+          open-sourced on Github
         </a>{" "}
-        by <a href="https://www.linkedin.com/in/ana-hipolito/">Ana Hipolito</a>
+        and{" "}
+        <a href="https://mellifluous-khapse-9a573b.netlify.app">
+          {" "}
+          hosted on Netlify 😎{" "}
+        </a>
       </footer>
     </div>
   );

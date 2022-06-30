@@ -5,10 +5,11 @@ ul {
 
 .weather-temperature {
   text-align: left;
+  padding-top: 5px;
 }
 
 .weather-temperature strong {
-  color: #4a4e52;
+  color: white;
   font-size: 90px;
   font-weight: 400;
   line-height: 64px;
@@ -19,7 +20,8 @@ ul {
 .units {
   position: relative;
   font-family: "Patrick Hand", cursive;
-  font-size: 16px;
+  font-size: 20px;
   top: -50px;
   margin-left: 10px;
+  color: white;
 }

@@ -68,6 +68,6 @@ export default function Search(props) {
     );
   } else {
     enterCity();
-    return "Gathering information...";
+    return <h5>"Gathering information..."</h5>;
   }
 }

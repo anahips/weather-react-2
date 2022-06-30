@@ -3,18 +3,18 @@ h1 {
   display: inline-block;
   font-family: "Patrick Hand", cursive;
   font-weight: 400;
-  color: #4a4e52;
+  color: white;
   margin: 0;
   padding: 0;
 }
 
 ul {
-  padding: 0;
+  padding: 5px 0 0 0;
 }
 
 li {
   list-style-type: none;
-  color: #4a4e52;
+  color: white;
   margin: 0;
   padding: 0;
   line-height: 19px;
