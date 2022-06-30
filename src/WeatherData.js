@@ -13,7 +13,7 @@ export default function WeatherData(props) {
           <Temperature data={props.data.temperature} />
         </div>
       </div>
-      <div className="col-6">
+      <div className="col-6 otherVariables">
         <ul>
           <li>
             Humidity: <span>{props.data.humidity}%</span>
